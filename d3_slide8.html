@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title> Slide 8 demo</title>
+         <meta charset="utf-8">
+        <script type="text/javascript" src="js/d3/d3.v3.js"></script>
+        <style type="text/css">
+            div.output{
+                height:800px;
+                width:300px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="output">
+            <svg width="250px" height="700px"> 
+                <rect x="150" y="100" width="60" height="300" fill="red"/>
+            </svg>
+        </div>
+        <script type="text/javascript">            
+           var svg = d3.select("div.output svg");
+//           //var svg = d3.select("div");
+//           var myRect = svg.select("rect");
+//           myRect.attr("width", 100);
+//           myRect.attr("height", 100);
+//           myRect.attr("fill","steelblue");
+            //Chain Style
+//            svg.select("rect")
+//                    .attr("width",100)
+//                    .attr("height",100)
+//                    .attr("fill","green");
+            //Object map style
+            svg.select("rect")
+                    .attr({
+                        width:100,
+                        height:100
+                    })
+                    .style("fill","brown");
+        </script> 
+    </body>
+</html>
+    
